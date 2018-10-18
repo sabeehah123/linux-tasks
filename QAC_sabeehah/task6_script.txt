@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "Enter any number greater than 1: "
+read number
+arraylist=$(seq 1 $number) 
+ 
+#for i in ${arraylist[@]}; do
+	#echo $i
+#done
+	for number in $arraylist; do
+		if [[ $(( $number % 3 )) == 0 && $(( $number % 5 )) == 0 ]]; then
+			echo "FizzBuzz"
+		elif [[ $(( $number % 3 )) == 0 ]]; then 
+			echo "fizz"
+		elif [[ $(( $number % 5 )) == 0 ]]; then 
+			echo "buzz"
+		else 
+			echo $number
+		fi
+	done
+
