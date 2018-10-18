@@ -1,0 +1,5 @@
+#!/bin/bash
+ps -aux | less
+echo -n "Enter Process ID: " 
+read prcoessid
+sudo kill -9 $processid
