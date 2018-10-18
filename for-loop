@@ -1,0 +1,3 @@
+for number in $(seq 1 3); do
+	touch file$number
+done
