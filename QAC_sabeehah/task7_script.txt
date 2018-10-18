@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Enter directory name: " 
+read dir
+echo "Number of files in the directory: "
+ls $dir | wc -l
+echo "Last edited: "
+ls -l | grep $dir | awk '{print $6" "$7" "$8}'
+cd $dir
+echo "The largest file in this directory is: "
+ls -l | sort | awk '{print $9}'| tail -2
+echo "The smallest file in the directory is "
+ls -l | sort | awk '{print $9}'| head -1  
