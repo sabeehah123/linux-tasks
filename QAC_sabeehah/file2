@@ -1,1 +1,17 @@
+#!/bin/bash
+echo -n "Enter a number: " 
+read n
+rem=$(( $n % 2)) 
+if [ $rem -eq 0 ]; then 
+	echo "$n is an even number"  >> file3
+else
+	echo "$n is an odd number" >> file3
+fi
 
+echo -n "Do you want to delete the file? (y/n)?: "
+read yes_no
+if [ "$YES_NO" == "y" ]; then 
+	rm file3
+else 
+	echo "File not deleted"
+fi
