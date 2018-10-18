@@ -1,0 +1,11 @@
+#!/bin/bash
+numbers=()
+echo "Enter any amount of numbers then press ctrl D to stop: "
+while read number 
+do 
+	numbers+=($number)
+done
+echo "numbers list : ${numbers[@]}"
+
+
+
