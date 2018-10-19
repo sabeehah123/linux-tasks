@@ -2,4 +2,4 @@
 ps -aux
 echo -n "Enter Process ID: " 
 read prcoessid
-kill -9 $processid
+sudo kill -9 $processid
