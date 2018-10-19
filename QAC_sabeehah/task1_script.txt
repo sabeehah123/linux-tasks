@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir ~/QAC_sabeehah
+mkdir -p ~/QAC_sabeehah
 cd ~/QAC_sabeehah 
 for number in $(seq 1 3); do
 	touch file$number
