@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Enter a filename: "
+read filename
+
+username="$(id -un)"
+
+userfile="$(ls -al | grep $filename | awk '{print $3}')"
+
+if [ $username = $userfile ]; then 
+	echo "You have permission to lock $filename"
+
+	chmod a-rwx $filename
+
+else 
+	echo "Permission denied"
+
+fi 
