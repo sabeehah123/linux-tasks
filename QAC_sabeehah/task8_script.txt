@@ -1,0 +1,7 @@
+#!/bin/bash
+cd ~
+touch user_file
+echo "cut -f 1,3 -d ':' /etc/passwd" >> user_file
+echo "grep -v root | grep -v sabeehah1996 | awk '{print $9}' | rm *" >> user_file
+ 
+
